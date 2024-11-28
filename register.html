@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Lotes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo-container">
+            <img src="images/puja1.png" alt="Logo" class="logo">
+            <h1 class="app-name">Pujamax</h1>
+        </div>
+        <div class="user-container">
+            <span><i class="fas fa-user"></i> User</span>
+            <a href="register.html" class="exit"><i class="fa-solid fa-gear"></i></a>
+            <a href="logout.html" class="exit"><i class="fas fa-sign-out-alt"></i> Salir</a>
+        </div>
+    </header>
+    <main class="main-container">
+        <section class="home-container">
+            <nav class="nav-container">
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+                <a href="history.html" class="nav-item"><i class="fas fa-history"></i> Historial</a>
+            </nav>
+        </section>
+        <section class="lots-container">
+            <!-- Lotes registrados -->
+            <div class="lots-grid">
+                <div class="lot-card">
+                    <h3>Información del usuario</h3>
+                    <p>Nombre: John Doe</p>
+                    <p>Correo: john.doe@example.com</p>
+                </div>
+                <div class="lot-card">
+                    <h3>Avenida Secundaria 456, Provincia</h3>
+                    <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="#addAddressModal" class="action-button">Editar</a>
+                </div>
+                <div class="lot-card">
+                    <h3>Lote 2</h3>
+                    <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="#addAddressModal" class="action-button">Editar</a>
+                </div>
+                <div class="lot-card">
+                    <h3>Calle Principal 123, Ciudad</h3>
+                    <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="#addAddressModal" class="action-button">Editar</a>
+                </div>
+            </div>
+            <a href="#addAddressModal" class="add-lote-button">Añadir Dirección</a>
+        </section>
+    </main>
+<!-- Modal para añadir nueva dirección de entrega -->
+<div id="addAddressModal" class="modal-address">
+    <div class="modal-content-address">
+        <a href="#" class="close-button-address">&times;</a>
+        <h2>Añadir Nueva Dirección de Entrega</h2>
+        <form style="width: 100%;">
+            <div class="address-grid">
+                <!-- Primera columna -->
+                <div class="column">
+                    <div class="input-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="provincia">Provincia</label>
+                        <select id="provincia" required>
+                            <option value="" disabled selected>Seleccione una provincia</option>
+                            <option value="Provincia1">Provincia 1</option>
+                            <option value="Provincia2">Provincia 2</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="callePrincipal">Calle Principal</label>
+                        <input type="text" id="callePrincipal" placeholder="Calle Principal" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="codigoPostal">Código Postal</label>
+                        <input type="text" id="codigoPostal" placeholder="Código Postal" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" placeholder="Teléfono" required>
+                    </div>
+                </div>
+
+                <!-- Segunda columna -->
+                <div class="column">
+                    <div class="input-group">
+                        <label for="empresa">Empresa (Opcional)</label>
+                        <input type="text" id="empresa" placeholder="Empresa (Opcional)">
+                    </div>
+                    <div class="input-group">
+                        <label for="ciudad">Ciudad</label>
+                        <select id="ciudad" required>
+                            <option value="" disabled selected>Seleccione una ciudad</option>
+                            <option value="Ciudad1">Ciudad 1</option>
+                            <option value="Ciudad2">Ciudad 2</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="calleSecundaria">Calle Secundaria (Opcional)</label>
+                        <input type="text" id="calleSecundaria" placeholder="Calle Secundaria">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroCasa">Nro. Casa/Departamento</label>
+                        <input type="text" id="numeroCasa" placeholder="Nro. Casa/Departamento" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">e-mail</label>
+                        <input type="email" id="email" placeholder="e-mail" required>
+                    </div>
+                </div>
+            </div>
+            <!-- Botones -->
+            <div class="button-group-address">
+                <a href="#" class="cancel-button-address">Cancelar</a>
+                <button type="submit" class="submit-button-address">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Modal para confirmar eliminación -->
+<div id="deleteLoteModal" class="modal-delete">
+    <div class="modal-content-delete">
+        <a href="#" class="close-button-delete">&times;</a>
+        <h3>¿Seguro deseas eliminar el lote?</h3>
+        <div class="button-group-delete">
+            <a href="#" class="cancel-button-delete">Cancelar</a>
+            <a href="delete_lote.html" class="accept-button-delete">Aceptar</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
