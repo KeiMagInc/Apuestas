@@ -11,115 +11,112 @@
     <header class="header-container">
         <div class="logo-container">
             <img src="images/puja1.png" alt="Logo" class="logo">
-            <h1 class="app-name">Pujamax</h1>
+            <h1 class="app-name">PujaMax</h1>
         </div>
         <div class="user-container">
             <span><i class="fas fa-user"></i> User</span>
-            <a href="register.html" class="exit"><i class="fa-solid fa-gear"></i></a>
-            <a href="logout.html" class="exit"><i class="fas fa-sign-out-alt"></i> Salir</a>
+            <a href="AUCTIONEER_PROFILE.html" class="exit"><i class="fa-solid fa-gear"></i></a>
+            <a href="logout.html" class="exit"><i class="fas fa-sign-out-alt"></i> Exit</a>
         </div>
     </header>
     <main class="main-container">
         <section class="home-container">
             <nav class="nav-container">
                 <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
-                <a href="history.html" class="nav-item"><i class="fas fa-history"></i> Historial</a>
+                <a href="history.html" class="nav-item"><i class="fas fa-history"></i> History</a>
             </nav>
         </section>
         <section class="lots-container">
             <!-- Lotes registrados -->
             <div class="lots-grid">
                 <div class="lot-card">
-                    <h3>Lote 1</h3>
-                    <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#addLoteModal" class="action-button">Editar</a>
+                    <h3>Lot 1</h3>
+                    <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="#LOT_FORM" class="action-button">Edit</a>
                 </div>
                 <div class="lot-card">
-                    <h3>Lote 2</h3>
-                    <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#addLoteModal" class="action-button">Editar</a>
+                    <h3>Lot 2</h3>
+                    <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="#LOT_FORM" class="action-button">Edit</a>
                 </div>
                 <div class="lot-card">
-                    <h3>Lote 3</h3>
-                    <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#addLoteModal" class="action-button">Editar</a>
+                    <h3>Lot 3</h3>
+                    <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="#LOT_FORM" class="action-button">Edit</a>
                 </div>
                 <div class="lot-card">
-                    <h3>Lote 4</h3>
-                    <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#addLoteModal" class="action-button">Editar</a>
+                    <h3>Lot 4</h3>
+                    <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="#LOT_FORM" class="action-button">Edit</a>
                 </div>
             </div>
-            <a href="#addLoteModal" class="add-lote-button">Añadir Lote</a>
+            <a href="#LOT_FORM" class="add-lote-button">Add lot</a>
         </section>
     </main>
 
     <!-- Modal para Registro de Lote -->
-<div id="addLoteModal" class="modal">
+<div id="LOT_FORM" class="modal">
     <div class="modal-content">
         <a href="#" class="close-button">&times;</a>
-        <h2>Registro de Lote</h2>
+        <h2>Batch History</h2>
         <form>
             <!-- Campo para el título -->
             <div class="input-group">
-                <label for="loteTitulo">Título</label>
-                <input type="text" id="loteTitulo" placeholder="Ingrese el título" required>
+                <label for="loteTitulo">Title</label>
+                <input type="text" id="loteTitulo" placeholder="Enter title" required>
             </div>
 
             <!-- Campo para la fecha de apertura -->
             <div class="input-group">
-                <label for="fechaApertura">Fecha de Apertura</label>
+                <label for="fechaApertura">Opening Date</label>
                 <input type="date" id="fechaApertura" required>
             </div>
 
             <!-- Campo para la fecha de clausura -->
             <div class="input-group">
-                <label for="fechaClausura">Fecha de Clausura</label>
+                <label for="fechaClausura">Closing Date</label>
                 <input type="date" id="fechaClausura" required>
             </div>
 
             <!-- Campo para seleccionar la ciudad -->
             <div class="input-group">
-                <label for="ciudad">Ciudad</label>
+                <label for="ciudad">City</label>
                 <select id="ciudad" required>
-                    <option value="" disabled selected>Seleccione una ciudad</option>
-                    <option value="Ciudad1">Ciudad 1</option>
-                    <option value="Ciudad2">Ciudad 2</option>
-                    <option value="Ciudad3">Ciudad 3</option>
+                    <option value="" disabled selected>Choose a city</option>
+                    <option value="Ciudad1">City 1</option>
+                    <option value="Ciudad2">City 2</option>
+                    <option value="Ciudad3">City 3</option>
                 </select>
             </div>
 
             <!-- Campo para seleccionar el método de entrega -->
             <div class="input-group">
-                <label for="entrega">Entrega</label>
+                <label for="entrega">Delivery</label>
                 <select id="entrega" required>
-                    <option value="" disabled selected>Seleccione el método de entrega</option>
-                    <option value="Presencial">Presencial</option>
-                    <option value="Envío">Envío</option>
+                    <option value="" disabled selected>Select delivery method</option>
+                    <option value="Presencial">On-site</option>
+                    <option value="Envío">Shipping</option>
                 </select>
             </div>
 
             <!-- Botones -->
             <div class="button-group">
-                <button type="button" class="cancel-button">Cancelar</button>
-                <button type="submit" class="submit-button">Guardar</button>
+                <button type="button" class="cancel-button">Cancel</button>
+                <button type="submit" class="submit-button">Save</button>
             </div>
         </form>
     </div>
 </div>
 <!-- Modal para confirmar eliminación -->
-<div id="deleteLoteModal" class="modal-delete">
+<div id="DELETE_LOT" class="modal-delete">
     <div class="modal-content-delete">
         <a href="#" class="close-button-delete">&times;</a>
-        <h3>¿Seguro deseas eliminar el lote?</h3>
+        <h3>¿Are you sure you want to delete the lot?</h3>
         <div class="button-group-delete">
-            <a href="#" class="cancel-button-delete">Cancelar</a>
-            <a href="delete_lote.html" class="accept-button-delete">Aceptar</a>
+            <a href="#" class="cancel-button-delete">Cancel</a>
+            <a href="delete_lote.html" class="accept-button-delete">Accept</a>
         </div>
     </div>
 </div>
-
-
-
 </body>
 </html>
