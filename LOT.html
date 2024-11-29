@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AUCTIONEER_LOTS_BOARD</title>
+    <title>LOT</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -22,87 +22,79 @@
     <main class="main-container">
         <section class="home-container">
             <nav class="nav-container">
-                <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+                <a href="AUCTIONEER_LOTS_BOARD.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
                 <a href="history.html" class="nav-item"><i class="fas fa-history"></i> History</a>
             </nav>
         </section>
         <section class="lots-container">
             <!-- Lotes registrados -->
             <div class="lots-grid">
-                <div class="lot-card" onclick="window.location.href='LOT.html';" style="cursor: pointer;">
-                    <h3>Lot 1</h3>
+                <div class="lot-card">
+                    <h3>Product 1</h3>
                     <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#LOT_FORM" class="action-button">Edit</a>
+                    <a href="#PRODUCT_FORM" class="action-button">Edit</a>
                 </div>                
-                <div class="lot-card" onclick="window.location.href='LOT.html';" style="cursor: pointer;">
-                    <h3>Lot 2</h3>
+                <div class="lot-card">
+                    <h3>Product 2</h3>
                     <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#LOT_FORM" class="action-button">Edit</a>
+                    <a href="#PRODUCT_FORM" class="action-button">Edit</a>
                 </div> 
-                <div class="lot-card" onclick="window.location.href='LOT.html';" style="cursor: pointer;">
-                    <h3>Lot 3</h3>
+                <div class="lot-card">
+                    <h3>Product 3</h3>
                     <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#LOT_FORM" class="action-button">Edit</a>
+                    <a href="#PRODUCT_FORM" class="action-button">Edit</a>
                 </div> 
-                <div class="lot-card" onclick="window.location.href='LOT.html';" style="cursor: pointer;">
-                    <h3>Lot 4</h3>
+                <div class="lot-card">
+                    <h3>Product 4</h3>
                     <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#LOT_FORM" class="action-button">Edit</a>
+                    <a href="#PRODUCT_FORM" class="action-button">Edit</a>
                 </div> 
             </div>
-            <a href="#LOT_FORM" class="add-lote-button">Add lot</a>
+            <a href="#PRODUCT_FORM" class="add-lote-button">Add product</a>
         </section>
     </main>
 
     <!-- Modal para Registro de Lote -->
-<div id="LOT_FORM" class="modal">
+<div id="PRODUCT_FORM" class="modal">
     <div class="modal-content">
         <a href="#" class="close-button">&times;</a>
-        <h2>Batch History</h2>
+        <h2>Product Registration</h2>
         <form>
-            <!-- Campo para el título -->
             <div class="input-group">
                 <label for="loteTitulo">Title</label>
                 <input type="text" id="loteTitulo" placeholder="Enter title" required>
             </div>
 
-            <!-- Campo para la fecha de apertura -->
             <div class="input-group">
-                <label for="fechaApertura">Opening Date</label>
-                <input type="date" id="fechaApertura" required>
-            </div>
-
-            <!-- Campo para la fecha de clausura -->
-            <div class="input-group">
-                <label for="fechaClausura">Closing Date</label>
-                <input type="date" id="fechaClausura" required>
-            </div>
-
-            <!-- Campo para seleccionar la ciudad -->
-            <div class="input-group">
-                <label for="ciudad">City</label>
+                <label for="ciudad">Category</label>
                 <select id="ciudad" required>
-                    <option value="" disabled selected>Choose a city</option>
-                    <option value="Ciudad1">City 1</option>
-                    <option value="Ciudad2">City 2</option>
-                    <option value="Ciudad3">City 3</option>
+                    <option value="" disabled selected>Choose a category</option>
+                    <option value="Ciudad1">Category 1</option>
+                    <option value="Ciudad2">Category 2</option>
+                    <option value="Ciudad3">Category 3</option>
                 </select>
             </div>
 
-            <!-- Campo para seleccionar el método de entrega -->
             <div class="input-group">
-                <label for="entrega">Delivery</label>
-                <select id="entrega" required>
-                    <option value="" disabled selected>Select delivery method</option>
-                    <option value="Presencial">On-site</option>
-                    <option value="Envío">Shipping</option>
-                </select>
+                <label for="loteTitulo">Initial Price</label>
+                <input type="text" id="loteTitulo" placeholder="Enter Initial Price" required>
             </div>
 
+            <div class="input-group">
+                <label for="loteTitulo">Description</label>
+                <input type="text" id="loteTitulo" placeholder="Enter description" required>
+            </div>
+
+            <div class="input-group">
+                <label for="loteFoto">Photo</label>
+                <input type="file" id="loteFoto" accept="image/*" style="display: none;">
+                <button type="button" onclick="document.getElementById('loteFoto').click()">Add file</button>
+            </div>
+            
             <!-- Botones -->
             <div class="button-group">
                 <a href="#" class="cancel-button">Cancel</a>
-                <button type="submit" class="submit-button">Save</button>
+                <button  class="accept-button" type="submit">Save</button>
             </div>
         </form>
     </div>
@@ -111,7 +103,7 @@
 <div id="DELETE_LOT" class="modal-delete">
     <div class="modal-content-delete">
         <a href="#" class="close-button-delete">&times;</a>
-        <h3>¿Are you sure you want to delete the lot?</h3>
+        <h3>¿Are you sure you want to delete the product?</h3>
         <div class="button-group-delete">
             <a href="#" class="cancel-button">Cancel</a>
             <a href="delete_lote.html" class="accept-button">Accept</a>

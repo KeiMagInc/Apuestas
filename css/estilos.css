@@ -265,6 +265,7 @@ input {
     background-color: #f9f9f9; /* Fondo claro */
     border: 1px solid #ddd; /* Borde de las tarjetas */
     border-radius: 8px; /* Bordes redondeados */
+    margin-top: 20px;
     padding: 25px 15px;
     position: relative; /* Para posicionar el ícono y el botón */
     display: flex;
@@ -440,11 +441,15 @@ input {
 .cancel-button {
     background-color: #dc3545;
     color: white;
-    padding: 10px 20px;
-    border: none;
+    padding: 10px 10px;
+    text-decoration: none;
     border-radius: 5px;
-    font-size: 16px;
+    border: 1px solid #ccc;
+    font-size: 14px;
     cursor: pointer;
+    text-align: center;
+    width: 10px 10px;
+    text-decoration: none;
 }
 
 .cancel-button:hover {
@@ -525,33 +530,29 @@ input {
 }
 
 /* Botón de cancelar */
-.cancel-button-delete {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
+
 
 .cancel-button-delete:hover {
-    background-color: #ddd;
+    background-color: #c82333;
 }
 
 /* Botón de aceptar */
-.accept-button-delete {
+.accept-button {
     background-color: #28a745;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-decoration: none;
     border-radius: 5px;
+    border: 1px solid #ccc;
     font-size: 14px;
     cursor: pointer;
+    text-align: center;
+    width: 10px 10px;
+    text-decoration: none;
+    
 }
 
-.accept-button-delete:hover {
+.accept-button:hover {
     background-color: #218838;
 }
 /* Fondo del modal */
@@ -664,21 +665,10 @@ input {
     margin-top: 20px;
 }
 
-.cancel-button-address {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    width: 48%;
-}
+
 
 .cancel-button-address:hover {
-    background-color: #ddd;
+    background-color: #c82333;
 }
 
 .submit-button-address {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Lotes</title>
+    <title>AUCTIONEER_PROFILE</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -22,107 +22,98 @@
     <main class="main-container">
         <section class="home-container">
             <nav class="nav-container">
-                <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+                <a href="AUCTIONEER_LOTS_BOARD.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
                 <a href="history.html" class="nav-item"><i class="fas fa-history"></i> History</a>
             </nav>
         </section>
         <section class="lots-container">
             <!-- Lotes registrados -->
             <div class="lots-grid">
-                <div class="lot-card">
-                    <h3>User Information</h3>
-                    <p>Name: John Doe</p>
-                    <p>E/il: john.doe@example.com</p>
+                <div>
+                    <div class="lot-card">
+                        <h3>User Information</h3>
+                        <p>Name: John Doe</p>
+                        <p>E/il: john.doe@example.com</p>
+                    </div>
                 </div>
-                <div class="lot-card">
-                    <h3>Avenida Secundaria 456, Provincia</h3>
-                    <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#addAddressModal" class="action-button">Editar</a>
-                </div>
-                <div class="lot-card">
-                    <h3>Lote 2</h3>
-                    <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#addAddressModal" class="action-button">Editar</a>
-                </div>
-                <div class="lot-card">
-                    <h3>Calle Principal 123, Ciudad</h3>
-                    <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#addAddressModal" class="action-button">Editar</a>
+                <div>
+                    <div class="lot-card">
+                        <h3>Avenida Secundaria 456, Provincia</h3>
+                        <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
+                        <a href="#addAddressModal" class="action-button">Editar</a>
+                    </div>
+                    <div class="lot-card">
+                        <h3>Calle Principal 123, Ciudad</h3>
+                        <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
+                        <a href="#addAddressModal" class="action-button">Editar</a>
+                    </div>
                 </div>
             </div>
-            <a href="#addAddressModal" class="add-lote-button">Añadir Dirección</a>
+            <a href="#addAddressModal" class="add-lote-button">Add Adress</a>
         </section>
     </main>
 <!-- Modal para añadir nueva dirección de entrega -->
 <div id="addAddressModal" class="modal-address">
     <div class="modal-content-address">
         <a href="#" class="close-button-address">&times;</a>
-        <h2>Añadir Nueva Dirección de Entrega</h2>
+        <h2>Add New Delivery Address</h2>
         <form style="width: 100%;">
             <div class="address-grid">
                 <!-- Primera columna -->
                 <div class="column">
                     <div class="input-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" placeholder="Nombre" required>
+                        <label for="nombre">Name</label>
+                        <input type="text" id="nombre" placeholder="Name" required>
                     </div>
                     <div class="input-group">
-                        <label for="provincia">Provincia</label>
+                        <label for="provincia">Province</label>
                         <select id="provincia" required>
-                            <option value="" disabled selected>Seleccione una provincia</option>
-                            <option value="Provincia1">Provincia 1</option>
-                            <option value="Provincia2">Provincia 2</option>
+                            <option value="" disabled selected>Choose a province</option>
+                            <option value="Provincia1">Province 1</option>
+                            <option value="Provincia2">Province 2</option>
                         </select>
                     </div>
                     <div class="input-group">
-                        <label for="callePrincipal">Calle Principal</label>
-                        <input type="text" id="callePrincipal" placeholder="Calle Principal" required>
+                        <label for="callePrincipal">Main street</label>
+                        <input type="text" id="callePrincipal" placeholder="Main street" required>
                     </div>
                     <div class="input-group">
-                        <label for="codigoPostal">Código Postal</label>
-                        <input type="text" id="codigoPostal" placeholder="Código Postal" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="telefono">Teléfono</label>
-                        <input type="text" id="telefono" placeholder="Teléfono" required>
+                        <label for="codigoPostal">Zip code</label>
+                        <input type="text" id="codigoPostal" placeholder="Zip code" required>
                     </div>
                 </div>
 
                 <!-- Segunda columna -->
                 <div class="column">
                     <div class="input-group">
-                        <label for="empresa">Empresa (Opcional)</label>
-                        <input type="text" id="empresa" placeholder="Empresa (Opcional)">
+                        <label for="empresa">Company (Optional)</label>
+                        <input type="text" id="empresa" placeholder="Company (Optional)">
                     </div>
                     <div class="input-group">
-                        <label for="ciudad">Ciudad</label>
+                        <label for="ciudad">City</label>
                         <select id="ciudad" required>
-                            <option value="" disabled selected>Seleccione una ciudad</option>
-                            <option value="Ciudad1">Ciudad 1</option>
-                            <option value="Ciudad2">Ciudad 2</option>
+                            <option value="" disabled selected>Choose a city</option>
+                            <option value="Ciudad1">City 1</option>
+                            <option value="Ciudad2">City 2</option>
                         </select>
                     </div>
                     <div class="input-group">
-                        <label for="calleSecundaria">Calle Secundaria (Opcional)</label>
-                        <input type="text" id="calleSecundaria" placeholder="Calle Secundaria">
+                        <label for="calleSecundaria">Secondary Street (Optional)</label>
+                        <input type="text" id="calleSecundaria" placeholder="Secondary Street (Optional)">
                     </div>
                     <div class="input-group">
-                        <label for="numeroCasa">Nro. Casa/Departamento</label>
-                        <input type="text" id="numeroCasa" placeholder="Nro. Casa/Departamento" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="email">e-mail</label>
-                        <input type="email" id="email" placeholder="e-mail" required>
+                        <label for="numeroCasa">House/Apartment No.</label>
+                        <input type="text" id="numeroCasa" placeholder="House/Apartment No." required>
                     </div>
                 </div>
             </div>
             <!-- Botones -->
-            <div class="button-group-address">
-                <a href="#" class="cancel-button-address">Cancelar</a>
-                <button type="submit" class="submit-button-address">Guardar</button>
+            <div class="button-group">
+                <a href="#" class="cancel-button">Cancel</a>
+                <button type="submit" class="accept-button">Save</button>
             </div>
         </form>
-    </div>
+    </div> 
 </div>
 <!-- Modal para confirmar eliminación -->
 <div id="deleteLoteModal" class="modal-delete">
@@ -130,8 +121,8 @@
         <a href="#" class="close-button-delete">&times;</a>
         <h3>¿Seguro deseas eliminar el lote?</h3>
         <div class="button-group-delete">
-            <a href="#" class="cancel-button-delete">Cancelar</a>
-            <a href="delete_lote.html" class="accept-button-delete">Aceptar</a>
+            <a href="#" class="cancel-button">Cancel</a>
+            <a href="delete_lote.html" class="accept-button">Aceptar</a>
         </div>
     </div>
 </div>
