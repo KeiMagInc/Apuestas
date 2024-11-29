@@ -23,7 +23,7 @@
         <section class="home-container">
             <nav class="nav-container">
                 <a href="AUCTIONEER_LOTS_BOARD.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
-                <a href="history.html" class="nav-item"><i class="fas fa-history"></i> History</a>
+                <a href="AUCTIONEER_BIDDING_HISTORY.html" class="nav-item"><i class="fas fa-history"></i> History</a>
             </nav>
         </section>
         <section class="lots-container">
@@ -39,21 +39,21 @@
                 <div>
                     <div class="lot-card">
                         <h3>Avenida Secundaria 456, Provincia</h3>
-                        <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                        <a href="#addAddressModal" class="action-button">Editar</a>
+                        <a href="#DELETE_ADDRESS" class="exit"><i class="fa-solid fa-trash-can"></i></a>
+                        <a href="#ADDRESS_FORM" class="action-button">Editar</a>
                     </div>
                     <div class="lot-card">
                         <h3>Calle Principal 123, Ciudad</h3>
-                        <a href="#deleteLoteModal" class="exit"><i class="fa-solid fa-trash-can"></i></a>
+                        <a href="#DELETE_ADDRESS" class="exit"><i class="fa-solid fa-trash-can"></i></a>
                         <a href="#addAddressModal" class="action-button">Editar</a>
                     </div>
                 </div>
             </div>
-            <a href="#addAddressModal" class="add-lote-button">Add Adress</a>
+            <a href="#ADDRESS_FORM" class="add-lote-button">Add Adress</a>
         </section>
     </main>
 <!-- Modal para añadir nueva dirección de entrega -->
-<div id="addAddressModal" class="modal-address">
+<div id="ADDRESS_FORM" class="modal-address">
     <div class="modal-content-address">
         <a href="#" class="close-button-address">&times;</a>
         <h2>Add New Delivery Address</h2>
@@ -116,13 +116,13 @@
     </div> 
 </div>
 <!-- Modal para confirmar eliminación -->
-<div id="deleteLoteModal" class="modal-delete">
+<div id="DELETE_ADDRESS" class="modal-delete">
     <div class="modal-content-delete">
         <a href="#" class="close-button-delete">&times;</a>
-        <h3>¿Seguro deseas eliminar el lote?</h3>
+        <h3>¿Are you sure you want to delete the address?</h3>
         <div class="button-group-delete">
             <a href="#" class="cancel-button">Cancel</a>
-            <a href="delete_lote.html" class="accept-button">Aceptar</a>
+            <a href="delete_lote.html" class="accept-button">Accept</a>
         </div>
     </div>
 </div>

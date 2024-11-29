@@ -23,7 +23,7 @@
         <section class="home-container">
             <nav class="nav-container">
                 <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
-                <a href="history.html" class="nav-item"><i class="fas fa-history"></i> History</a>
+                <a href="AUCTIONEER_BIDDING_HISTORY.html" class="nav-item"><i class="fas fa-history"></i> History</a>
             </nav>
         </section>
         <section class="lots-container">
@@ -31,24 +31,44 @@
             <div class="lots-grid">
                 <div class="lot-card" onclick="window.location.href='LOT.html';" style="cursor: pointer;">
                     <h3>Lot 1</h3>
-                    <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#LOT_FORM" class="action-button">Edit</a>
-                </div>                
+                    <a href="#DELETE_LOT" class="exit" onclick="event.stopPropagation();">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                    <a href="#LOT_FORM" class="action-button" onclick="event.stopPropagation();">
+                        Edit
+                    </a>
+                </div>
+                               
                 <div class="lot-card" onclick="window.location.href='LOT.html';" style="cursor: pointer;">
                     <h3>Lot 2</h3>
-                    <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#LOT_FORM" class="action-button">Edit</a>
-                </div> 
+                    <a href="#DELETE_LOT" class="exit" onclick="event.stopPropagation();">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                    <a href="#LOT_FORM" class="action-button" onclick="event.stopPropagation();">
+                        Edit
+                    </a>
+                </div>
+                
                 <div class="lot-card" onclick="window.location.href='LOT.html';" style="cursor: pointer;">
                     <h3>Lot 3</h3>
-                    <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#LOT_FORM" class="action-button">Edit</a>
-                </div> 
+                    <a href="#DELETE_LOT" class="exit" onclick="event.stopPropagation();">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                    <a href="#LOT_FORM" class="action-button" onclick="event.stopPropagation();">
+                        Edit
+                    </a>
+                </div>
+                
                 <div class="lot-card" onclick="window.location.href='LOT.html';" style="cursor: pointer;">
                     <h3>Lot 4</h3>
-                    <a href="#DELETE_LOT" class="exit"><i class="fa-solid fa-trash-can"></i></a>
-                    <a href="#LOT_FORM" class="action-button">Edit</a>
-                </div> 
+                    <a href="#DELETE_LOT" class="exit" onclick="event.stopPropagation();">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                    <a href="#LOT_FORM" class="action-button" onclick="event.stopPropagation();">
+                        Edit
+                    </a>
+                </div>
+                
             </div>
             <a href="#LOT_FORM" class="add-lote-button">Add lot</a>
         </section>

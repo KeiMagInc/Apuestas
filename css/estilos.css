@@ -281,7 +281,7 @@ input {
     color: #333;
 }
 
-.lot-card .action-button {
+.action-button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -289,6 +289,7 @@ input {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
+    text-decoration: none;
     margin-left: auto;
 }
 
