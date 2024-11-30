@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUCTIONEER_LOTS_BOARD</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="logo-container">
+            <img src="../images/puja1.png" alt="">
+            <h1 class="app-name">PujaMax</h1>
+        </div>
+        <div class="user-container">
+            <span><i class="fas fa-user"></i>User (Auctioneer)</span>
+            <a href="../AUCTIONEER/AUCTIONEER_PROFILE.html" class="exit"><i class="fa-solid fa-gear"></i></a>
+            <a href="../AUCTIONEER/LOGIN.html" class="exit"><i class="fas fa-sign-out-alt"></i> Exit</a>
+        </div>
+    </header>
+    <main class="main-container">
+        <section class="home-container">
+            <nav class="nav-container">
+                <a href="../AUCTIONEER/AUCTIONEER_LOTS_BOARD.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+                <a href="../AUCTIONEER/AUCTIONEER_HISTORY.html" class="nav-item"><i class="fas fa-history"></i>
+                    History</a>
+            </nav>
+        </section>
+        <section class="lots-container">
+            <div class="lots-grid">
+                <div class="lot-card" onclick="window.location.href='../AUCTIONEER/AUCTIONEER_LOT.html';"
+                    style="cursor: pointer;">
+                    <h3>Lot 1</h3>
+                    <a href="#DELETE_LOT" class="exit" onclick="event.stopPropagation();">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                    <a href="#LOT_FORM" class="action-button" onclick="event.stopPropagation();">
+                        Edit
+                    </a>
+                </div>
+                <div class="lot-card" onclick="window.location.href='../AUCTIONEER/AUCTIONEER_LOT.html';"
+                    style="cursor: pointer;">
+                    <h3>Lot 3</h3>
+                    <a href="#DELETE_LOT" class="exit" onclick="event.stopPropagation();">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                    <a href="#LOT_FORM" class="action-button" onclick="event.stopPropagation();">
+                        Edit
+                    </a>
+                </div>
+                <div class="lot-card" onclick="window.location.href='../AUCTIONEER/AUCTIONEER_LOT.html';"
+                    style="cursor: pointer;">
+                    <h3>Lot 2</h3>
+                    <a href="#DELETE_LOT" class="exit" onclick="event.stopPropagation();">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                    <a href="#LOT_FORM" class="action-button" onclick="event.stopPropagation();">
+                        Edit
+                    </a>
+                </div>
+                <div class="lot-card" onclick="window.location.href='../AUCTIONEER/AUCTIONEER_LOT.html';"
+                    style="cursor: pointer;">
+                    <h3>Lot 4</h3>
+                    <a href="#DELETE_LOT" class="exit" onclick="event.stopPropagation();">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                    <a href="#LOT_FORM" class="action-button" onclick="event.stopPropagation();">
+                        Edit
+                    </a>
+                </div>
+            </div>
+            <a href="#LOT_FORM" class="add-lote-button">Add lot</a>
+        </section>
+    </main>
+    <div id="LOT_FORM" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-button">&times;</a>
+            <h2>Batch History</h2>
+            <form>
+                <div class="input-group">
+                    <label for="loteTitulo">Title</label>
+                    <input type="text" id="loteTitulo" placeholder="Mandatory" required>
+                </div>
+                <div class="input-group">
+                    <label for="fechaApertura">Opening Date</label>
+                    <input type="date" id="fechaApertura" required>
+                </div>
+                <div class="input-group">
+                    <label for="fechaClausura">Closing Date</label>
+                    <input type="date" id="fechaClausura" required>
+                </div>
+                <div class="input-group">
+                    <label for="ciudad">City</label>
+                    <select id="ciudad" required>
+                        <option value="" disabled selected>Choose a city</option>
+                        <option value="Ciudad1">City 1</option>
+                        <option value="Ciudad2">City 2</option>
+                        <option value="Ciudad3">City 3</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="entrega">Delivery</label>
+                    <select id="entrega" required>
+                        <option value="" disabled selected>Select delivery method</option>
+                        <option value="Presencial">On-site</option>
+                        <option value="Envío">Shipping</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <a href="#" class="cancel-button">Cancel</a>
+                    <button type="submit" class="accept-button">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="DELETE_LOT" class="modal-delete">
+        <div class="modal-content-delete">
+            <a href="#" class="close-button-delete">&times;</a>
+            <h3>Are you sure you want to delete the lot?</h3>
+            <div class="button-group-delete">
+                <a href="#" class="cancel-button">Cancel</a>
+                <button type="submit" class="submit-button">Accept</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

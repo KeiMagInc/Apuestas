@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIDDER_HISTORY</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="logo-container">
+            <img src="../images/puja1.png" alt="Logo" class="logo">
+            <h1 class="app-name">PujaMax</h1>
+        </div>
+        <div class="user-container">
+            <span><i class="fas fa-user"></i>User (Bidder)</span>
+            <a href="../BIDDER/BIDDER_PROFILE.html" class="exit"><i class="fa-solid fa-gear"></i></a>
+            <a href="../BIDDER/LOGIN.html" class="exit"><i class="fas fa-sign-out-alt"></i> Exit</a>
+        </div>
+    </header>
+    <main class="main-container">
+        <section class="home-container">
+            <nav class="nav-container">
+                <a href="../BIDDER/BIDDER_LOTS_BOARD.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+                <a href="../BIDDER/BIDDER_HISTORY.html" class="nav-item"><i class="fas fa-history"></i> History</a>
+            </nav>
+        </section>
+        <section class="lots-container">
+            <div class="lots-grid">
+                <div class="lots-grid">
+                    <img src="placeholder.png" alt="Product Photo">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img1.png" alt="Img1">
+                    <img src="img2.png" alt="Img2">
+                    <img src="img3.png" alt="Img3">
+                    <img src="img4.png" alt="Img4">
+                </div>
+            </div>
+            <div class="lots-grid">
+                <div class="lot-card">
+                    <div>
+                        <label for="bids">Bids</label>
+                        <input type="text" id="bids" placeholder="Number of Bids">
+                    </div>
+                    <div>
+                        <label for="current-price">Current Price</label>
+                        <input type="text" id="current-price" placeholder="Current Price">
+                    </div>
+                </div>
+                <div class="lot-card">
+                    <label for="minimum-increase">Minimum Increase</label>
+                    <input type="text" id="minimum-increase" placeholder="Minimum Increase">
+                </div>
+                <div class="lot-card">
+                    <label for="bid">Bid</label>
+                    <input type="text" id="bid" placeholder="Enter your bid">
+                    <a href="#NEW_HIGH_BID" class="action-button">Submit</a>
+                </div>
+                <div class="lot-card">
+                    <label for="description">Description</label>
+                    <input type="text" id="minimum-increase" placeholder="Description">
+                </div>
+            </div>
+            <div class="lot-card">Product State</div>
+        </section>
+    </main>
+    <div id="NEW_HIGH_BID" class="modal-address">
+        <div class="modal-content">
+            <a href="#" class="close-button">&times;</a>
+            <h2>Product Registration</h2>
+            <form>
+                <div class="input-group">
+                    <label for="loteTitulo">Title</label>
+                    <input type="text" id="loteTitulo" placeholder="Mandatory" required>
+                </div>
+                <div class="input-group">
+                    <label for="loteTitulo">Current Price</label>
+                    <input type="text" id="loteTitulo" placeholder="Mandatory" required>
+                </div>
+                <div class="input-group">
+                    <label for="loteTitulo">Bid</label>
+                    <input type="text" id="loteTitulo" placeholder="Mandatory" required>
+                </div>
+                <div class="button-group">
+                    <a href="#" class="cancel-button">Cancel</a>
+                    <button type="submit" class="accept-button">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="DESCRIPTION_REJECTION" class="modal-delete">
+        <div class="modal-content-delete">
+            <a href="#" class="close-button-delete">&times;</a>
+            <h3>Description of the rejected decision</h3>
+            <div class="button-group-delete">
+                <a href="#" class="accept-button">Accept</a>
+            </div>
+        </div>
+    </div>
+    <div id="DESCRIPTION_ADDRESS" class="modal-address">
+        <div class="modal-content-address">
+            <a href="#" class="close-button-address">&times;</a>
+            <h2>Add New Delivery Address</h2>
+            <form style="width: 100%;">
+                <div class="address-grid">
+                    <div class="column">
+                        <div class="input-group">
+                            <label for="nombre">Name</label>
+                            <input type="text" id="nombre" placeholder="Mandatory" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="provincia">Province</label>
+                            <select id="provincia" required>
+                                <option value="" disabled selected>Choose a province</option>
+                                <option value="Provincia1">Province 1</option>
+                                <option value="Provincia2">Province 2</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="callePrincipal">Main street</label>
+                            <input type="text" id="callePrincipal" placeholder="Mandatory" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="codigoPostal">Zip code</label>
+                            <input type="text" id="codigoPostal" placeholder="Mandatory" required>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="input-group">
+                            <label for="empresa">Company</label>
+                            <input type="text" id="empresa" placeholder="Optional">
+                        </div>
+                        <div class="input-group">
+                            <label for="ciudad">City</label>
+                            <select id="ciudad" required>
+                                <option value="" disabled selected>Choose a city</option>
+                                <option value="Ciudad1">City 1</option>
+                                <option value="Ciudad2">City 2</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="calleSecundaria">Secondary Street</label>
+                            <input type="text" id="calleSecundaria" placeholder="Optional">
+                        </div>
+                        <div class="input-group">
+                            <label for="numeroCasa">House/Apartment No.</label>
+                            <input type="text" id="numeroCasa" placeholder="Mandatory" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <a href="#" class="cancel-button">Cancel</a>
+                    <button type="submit" class="accept-button">Save</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
