@@ -14,17 +14,18 @@ body {
 
 /* Login Form Styles */
 .form-frame {
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     padding: 30px;
 }
 
 .login-image {
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
     object-fit: contain;
     border-radius: 10px;
+    background: #f00000;
 }
 
 .login-header {
@@ -41,7 +42,7 @@ body {
 }
 
 .loginBtn a:hover {
-    background: red;
+    background: #ff0000;
 }
 
 /* Footer Styles */
@@ -75,11 +76,11 @@ footer p {
     font-size: 1.25rem;
     font-weight: bold;
     margin: 0;
-    color: white;
+    color: #fff;
 }
 
 .header-container a {
-    color: white;
+    color: #fff;
     font-size: 1rem;
     text-decoration: none;
 }
@@ -148,13 +149,14 @@ footer p {
     font-size: 0.9rem;
 }
 
+
 /* Product Styles */
 .product-card {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 20px;
-    background-color: white;
+    background-color: #fff;
 }
 
 .product-img {
@@ -172,7 +174,7 @@ footer p {
 /* Buttons */
 .btn-view {
     background-color: #007bff;
-    color: white;
+    color: #fff;
     font-weight: bold;
     border: none;
 }
@@ -187,7 +189,7 @@ footer p {
     border-radius: 5px;
     padding: 10px;
     background-color: #007bff;
-    color: white;
+    color: #fff;
     font-weight: bold;
     border: none;
     transition: background-color 0.3s;
@@ -198,10 +200,11 @@ footer p {
     background-color: #005bb3;
 }
 
+
 /* Status Styles */
 .status-badge {
     background-color: #28a745;
-    color: white;
+    color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -214,7 +217,7 @@ footer p {
     padding: 10px;
     margin-bottom: 10px;
     font-weight: bold;
-    color: white;
+    color: #fff;
     width: 50%;
 }
 
@@ -228,7 +231,7 @@ footer p {
 
 /* Modal Header Styles */
 .modal-header {
-    color: white;
+    color: #fff;
 }
 
 /* Descriptions */
@@ -246,7 +249,10 @@ footer p {
 }
 
 .carousel-inner img {
-    height: 400px; /* Fixed height for all images */
-    object-fit: cover; /* Maintain aspect ratio while cropping excess */
-    width: 100%; /* Ensure full width */
+    height: 400px;
+    /* Fixed height for all images */
+    object-fit: cover;
+    /* Maintain aspect ratio while cropping excess */
+    width: 100%;
+    /* Ensure full width */
 }
