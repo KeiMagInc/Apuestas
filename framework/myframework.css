@@ -3,6 +3,15 @@ body {
     background-color: #f8f9fa;
 }
 
+.div-image {
+    background-color: #003c8f;
+}
+
+.height-div-image {
+    height: 324px;
+    padding-top: 20px;
+}
+
 /* Login Form Styles */
 .form-frame {
     background: white;
@@ -26,7 +35,8 @@ body {
 .image-description {
     text-align: center;
     font-size: 1rem;
-    color: #6c757d;
+    color: #fff;
+    padding-top: 30px;
     margin-top: 10px;
 }
 
