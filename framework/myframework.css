@@ -31,7 +31,7 @@ main {
 }
 .height-div-image {
     height: 324px;
-    padding-top: 20px;
+    padding-top: 0px;
 }
 /* Login Form Styles */
 .form-frame {
